@@ -72,7 +72,7 @@ class OpenAITTS:
         # Select the model from configuration; default to 'tts-1'
         model = settings.config["settings"]["tts"].get("openai_model", "tts-1")
 
-        # Create Payload for API-request
+        # Create payload for API request
         payload = {
             "model": model,
             "voice": voice,
