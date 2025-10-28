@@ -29,7 +29,7 @@ class OpenAITTS:
         base_url = settings.config["settings"]["tts"].get(
             "openai_api_url", "https://api.openai.com/v1"
         )
-        # Entferne ggf. den abschließenden Slash
+        # Remove trailing slash if present
         if base_url.endswith("/"):
             base_url = base_url[:-1]
         # Hänge den TTS-spezifischen Pfad an
