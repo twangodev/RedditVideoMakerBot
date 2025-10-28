@@ -32,7 +32,7 @@ class OpenAITTS:
         # Remove trailing slash if present
         if base_url.endswith("/"):
             base_url = base_url[:-1]
-        # Hänge den TTS-spezifischen Pfad an
+        # Append the TTS-specific path
         self.api_url = base_url + "/audio/speech"
 
         # Set the available voices to a static list as per OpenAI TTS documentation.
