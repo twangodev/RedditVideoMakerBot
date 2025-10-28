@@ -131,7 +131,7 @@ def create_fancy_thumbnail(image, text, text_color, padding, wrap=35):
     draw = ImageDraw.Draw(image)
     text_height = get_text_height(draw, text, font, wrap)
     lines = textwrap.wrap(text, width=wrap)
-    # This are -50 to reduce the empty space at the bottom of the image,
+    # This is -50 to reduce the empty space at the bottom of the image,
     # change it as per your requirement if needed otherwise leave it.
     new_image_height = image_height + text_height + padding * (len(lines) - 1) - 50
 
