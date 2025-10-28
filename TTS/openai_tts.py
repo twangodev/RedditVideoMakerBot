@@ -25,7 +25,7 @@ class OpenAITTS:
                 "No OpenAI API key provided in settings! Please set 'openai_api_key' in your config."
             )
 
-        # Lese den Basis-URL aus der Konfiguration (z. B. "https://api.openai.com/v1" oder "https://api.openai.com/v1/")
+        # Read the base URL from the configuration (e.g., "https://api.openai.com/v1" or "https://api.openai.com/v1/")
         base_url = settings.config["settings"]["tts"].get(
             "openai_api_url", "https://api.openai.com/v1"
         )
