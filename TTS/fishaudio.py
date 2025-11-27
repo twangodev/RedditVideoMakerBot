@@ -28,6 +28,7 @@ class FishAudio:
         audio = self.client.tts.convert(text=text, reference_id=voice_id)
 
         from fishaudio.utils import save
+
         save(audio, filepath)
 
     def initialize(self):
