@@ -1,5 +1,8 @@
 import random
 
+from fishaudio import FishAudio as FishAudioClient
+from fishaudio.utils import save
+
 from utils import settings
 
 
@@ -26,14 +29,9 @@ class FishAudio:
             voice_id = str(settings.config["settings"]["tts"]["fishaudio_voice"])
 
         audio = self.client.tts.convert(text=text, reference_id=voice_id)
-
-        from fishaudio.utils import save
-
         save(audio, filepath)
 
     def initialize(self):
-        from fishaudio import FishAudio as FishAudioClient
-
         api_key = settings.config["settings"]["tts"].get("fishaudio_api_key")
         if not api_key:
             raise ValueError(
